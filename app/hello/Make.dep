@@ -1,0 +1,62 @@
+# Gen Make.dep automatically
+hello_main.c.home.halysson.nuttxspace_mainline.apps.examples.hello.o: \
+ hello_main.c \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/config.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/stdio.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/sys/types.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/compiler.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/stdint.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/arch/types.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/arch/inttypes.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/limits.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/arch/limits.h \
+ /opt/gcc/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/time.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/fs/fs.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/fs/ioctl.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/stdbool.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/serial/tioctl.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/fs/uio.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/sys/uio.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/dirent.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/atomic.h \
+ /opt/gcc/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdatomic.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/mutex.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/assert.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/semaphore.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/errno.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/semaphore.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/queue.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/clock.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/lib/math32.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/inttypes.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/stddef.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/strings.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/string.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/alloca.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/mm/map.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/mm/gran.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/spawn.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/spawn.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/sched.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/signal.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/irq.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/arch/irq.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/arch/syscall.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/arch/chip/irq.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/arch/stm32h7/stm32h7x3xx_irq.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/arch/armv7-m/irq.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/arch/armv7-m/nvicpri.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/arch/chip/chip.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/spinlock_type.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/lib/lib.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/kmalloc.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/stdlib.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/mm/mm.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/nuttx/userspace.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/pthread.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/unistd.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/malloc.h \
+ /home/halysson/nuttxspace_mainline/nuttx/include/dlfcn.h
+# No files specified for dependency generation
+# No files specified for dependency generation
