@@ -1,0 +1,4 @@
+nuttx-export/
+.o*
+.vscode/
+gen/
