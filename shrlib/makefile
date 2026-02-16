@@ -15,10 +15,11 @@ CFLAGS := \
   $(ARCHCPUFLAGS) \
 
 COMMON_FLAGS := \
+  -fPIC \
+  -fPIE \
   $(ARCHPICFLAGS) \
   $(CFLAGS) \
-  $(INCLUDES) \
-  -Wl,--section-alignment,8
+  $(INCLUDES)
 
 NUTTX_LIBS := \
   -L../nuttx-export/libs \
@@ -43,10 +44,15 @@ $(TARGET): $(OBJ)
 
 $(DYN): $(OBJ)
 	@mkdir -p $(dir $@)
-	$(LD) -Map $(GENDIR)/shrlib.map \
-	      -Bsymbolic -G -Bdynamic \
-	      -o $@ \
-	      $(OBJ) $(NUTTX_LIBS)
+	$(LD) -T ../nuttx-export/scripts/gnu-elf.ld \
+	      -r -o $@ $(OBJ)
+
+# $(DYN): $(OBJ)
+# 	@mkdir -p $(dir $@)
+# 	$(LD) -Map $(GENDIR)/shrlib.map \
+# 	      -Bsymbolic -G -Bdynamic \
+# 	      -o $@ \
+# 	      $(OBJ) $(NUTTX_LIBS)
 
 clean:
 	rm -rf $(GENDIR)

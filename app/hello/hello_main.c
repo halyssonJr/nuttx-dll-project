@@ -26,6 +26,8 @@
 
 #include <nuttx/config.h>
 #include <stdio.h>
+#include <sys/mount.h>
+#include <errno.h>
 #include <dlfcn.h>
 
 /****************************************************************************
@@ -35,20 +37,38 @@
 /****************************************************************************
  * hello_main
  ****************************************************************************/
-#define FS_NAME "/bin"
-char *dynamic_lib_name = "hello_world.so";
 
 int main(int argc, FAR char *argv[])
 {
-  char path[128] = {0x00};
-  printf("Opening %s DLL\n", dynamic_lib_name);
-  snprintf(path, 128, "%s/%s", FS_NAME, dynamic_lib_name);
-  void *handle = dlopen(path, RTLD_NOW);
-  if (handle)
-  {
-    printf("Ok\n");
-    dlclose(handle);
-  }
+  int ret;
 
+  ret = mount("/dev/mmcsd0",
+              "/mnt/elf",
+              "vfat",
+              MS_RDONLY,
+              NULL);
+
+  if (ret < 0)
+    {
+      fprintf(stderr, "ERROR: mount failed: %d (errno=%d)\n", ret, errno);
+      return -1;
+    }
+
+  void *handle = dlopen("/mnt/elf/shrlib.so", RTLD_NOW);
+  if (!handle)
+    {
+      fprintf(stderr, "dlopen failed: %s\n", dlerror());
+      return -1;
+    }
+  
+  int (*multiplication)(void) = dlsym(handle, "shrlib_mult");
+  if (!multiplication)
+    {
+      dlclose(handle);
+      return -1;
+    }
+ 
+  printf("Result is = %d\n", multiplication());
+  dlclose(handle);
   return 0;
 }
